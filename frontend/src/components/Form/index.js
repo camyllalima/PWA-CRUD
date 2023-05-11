@@ -66,19 +66,19 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
     <FormContainer ref={ref} onSubmit={handleSubmit}>
       <InputArea>
         <Label>Nome</Label>
-        <Input name="nome" />
+        <Input name="nome" placeholder="Camylla Lima" />
       </InputArea>
       <InputArea>
         <Label>E-mail</Label>
-        <Input name="email" type="email" />
+        <Input name="email" type="email" placeholder="camylla@gmail.com" />
       </InputArea>
       <InputArea>
         <Label>Telefone</Label>
-        <Input name="telefone" />
+        <Input name="telefone" placeholder="(81) 9.9876-5432" />
       </InputArea>
       <InputArea>
         <Label>Data de Nascimento</Label>
-        <Input name="data_nascimento" type="date" />
+        <Input name="data_nascimento" type="date" max="9999-12-31" />
       </InputArea>
 
       <Button type="submit">SALVAR</Button>
