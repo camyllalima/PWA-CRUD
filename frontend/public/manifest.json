@@ -1,0 +1,20 @@
+{
+  "start_url": "/index.html",
+  "short_name": "Legends",
+  "name": "Legends",
+  "description": "Sistema de Cadastro",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "assets/images/logo.png",
+      "type": "image/png",
+      "sizes": "4000x4000"
+    }
+  ],
+  "background_color": "#f2f2f2",
+  "theme_color": "#f2f2f2",
+  "shortcuts": [],
+  "lang": "pt",
+  "display": "standalone",
+  "orientation": "any"
+}

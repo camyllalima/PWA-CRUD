@@ -9,7 +9,7 @@ export const NavScrollExample = () => {
     <Navbar bg="dark" expand="lg">
       <Container fluid>
         <Navbar.Brand href="#">
-          <img style={{ width: "4rem" }} src="../logo.png" />
+          <img style={{ width: "4rem", height: "4rem" }} src={"logo.png"}/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
