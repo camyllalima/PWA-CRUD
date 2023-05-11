@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useEffect, useRef } from "react";
-import styled from "styled-components";
 import { toast } from "react-toastify";
 import { FormContainer, InputArea, Input, Label, Button } from "./styles";
 
