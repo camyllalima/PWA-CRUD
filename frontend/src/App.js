@@ -3,9 +3,11 @@ import axios from "axios";
 import GlobalStyle from "./styles/global.js";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Container, Title } from "./styles/styles";
+import { Title } from "./styles/styles";
 import Form from "./components/Form";
 import Grid from "./components/Grid";
+import { NavScrollExample } from "./components/NavBar/index.js";
+import Container from "react-bootstrap/esm/Container.js";
 
 const App = () => {
   const [users, setUsers] = useState([]);
@@ -26,6 +28,7 @@ const App = () => {
 
   return (
     <>
+      <NavScrollExample />
       <Container>
         <Title>{"Usuários"}</Title>
         <Form onEdit={onEdit} setOnEdit={setOnEdit} getUsers={getUsers} />

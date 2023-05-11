@@ -2,7 +2,8 @@ import React from "react";
 import axios from "axios";
 import { FaTrash, FaEdit } from "react-icons/fa";
 import { toast } from "react-toastify";
-import { Table, Tbody, Th, Thead, Tr, Td } from "./styles";
+// import { Tbody, td, Thead, Tr, td } from "./styles";
+import Table from "react-bootstrap/Table";
 
 const Grid = ({ users, setUsers, setOnEdit }) => {
   const handleEdit = (item) => {
@@ -24,33 +25,35 @@ const Grid = ({ users, setUsers, setOnEdit }) => {
   };
 
   return (
-    <Table>
-      <Thead>
-        <Tr>
-          <Th>Nome</Th>
-          <Th>Email</Th>
-          <Th onlyWeb>Telefone</Th>
-          <Th></Th>
-          <Th></Th>
-        </Tr>
-      </Thead>
-      <Tbody>
+    <Table responsive striped bordered hover variant="dark">
+      <thead>
+        <tr>
+          <td>Nome</td>
+          <td>Email</td>
+          <td onlyWeb>Telefone</td>
+          <td>Nascimento</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </thead>
+      <tbody>
         {users.map((item, i) => (
-          <Tr key={i}>
-            <Td width="30%">{item.nome}</Td>
-            <Td width="30%">{item.email}</Td>
-            <Td width="20%" onlyWeb>
+          <tr key={i}>
+            <td width="30%">{item.nome}</td>
+            <td width="30%">{item.email}</td>
+            <td width="20%" onlyWeb>
               {item.telefone}
-            </Td>
-            <Td alignCenter width="5%">
+            </td>
+            <td>{item.data_Nascimento}</td>
+            <td alignCenter width="5%">
               <FaEdit onClick={() => handleEdit(item)} />
-            </Td>
-            <Td alignCenter width="5%">
+            </td>
+            <td alignCenter width="5%">
               <FaTrash onClick={() => handleDelete(item.id)} />
-            </Td>
-          </Tr>
+            </td>
+          </tr>
         ))}
-      </Tbody>
+      </tbody>
     </Table>
   );
 };
